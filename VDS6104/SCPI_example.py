@@ -1,12 +1,6 @@
 import pyvisa
 import matplotlib.pyplot as plt
 
-
-
-
-
-
-
 address = "USB0::0x5345::0x1235::2052100::INSTR"
 resource = pyvisa.ResourceManager()
 instrument = resource.open_resource(address)
@@ -23,7 +17,6 @@ def getSampleRate(outputs, bits, samplingPoints, timeBase):
         return samplePts / timeBase
     else:
         return maxRate
-
 
 # THESE SETTINGS ARE TO CAPTURE A 1KHz, 1Vp WAVEFORM
 # DIRECTLY WITH BNC (1X PROBE)
